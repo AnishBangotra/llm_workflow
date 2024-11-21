@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+Workflow UI
+=================
+Drag-and-Drop Functionality
+-----------------------------
+Requirement:
+Create an intuitive drag-and-drop interface.
+Allow users to place Input, LLM, and Output nodes onto a canvas.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Key Features:
+------------------
+Visual feedback when dragging and dropping nodes.
+Snap to grid or alignment guides for better placement.
+Prevent overlapping nodes.
 
-## Available Scripts
+Node Connections
+-------------------
+Requirement:
+Enable connections between nodes in a specific order:
+Input → LLM → Output.
+Key Features:
+Validation to ensure:
+Input node connects only to an LLM node.
+LLM node connects only to an Output node.
+Visual indicators for valid/invalid connections.
+Automatic rerouting for cleaner node paths.
 
-In the project directory, you can run:
 
-### `npm start`
+Node Functionality
+========================
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Input Node
+---------------------
+Requirement:
+Accept queries or prompts from the user.
+Validate the input to ensure it's suitable for LLM processing.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Key Features:
+Text input field for user queries.
+Validation logic to check for:
+Non-empty inputs.
+Valid data type (e.g., text only).
+Placeholder text or examples for user guidance.
 
-### `npm test`
+LLM Node
+-----------------------
+Requirement:
+Allow users to configure parameters for the LLM.
+Validate credentials and configurations.
+Key Features:
+Configuration form with:
+API key input.
+Model selection (e.g., text-davinci-003).
+Optional parameters (e.g., temperature, max tokens).
+Validation logic:
+API key format check.
+Parameter range validation (e.g., temperature between 0 and 1).
+Default values for commonly used configurations.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Output Node
+--------------------------
+Requirement:
+Display the result from the LLM.
+Key Features:
+Read-only output display.
+Format results (e.g., display as plain text or JSON).
+Clear error messages if no output is generated.
 
-### `npm run build`
+Workflow Execution
+=======================================
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Run Button
+-------------------------
+Requirement:
+Trigger the workflow execution in the correct order.
+Key Features:
+Sequentially process:
+Input validation.
+LLM execution with configurations.
+Output display.
+Disable button during execution to prevent duplicate runs.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Error Handling
+---------------------------
+Requirement:
+Identify and handle errors gracefully during workflow execution.
+Key Features:
+Error types:
+Invalid input data.
+LLM API failures (e.g., invalid credentials, timeout).
+Unconnected or incomplete workflows.
+User feedback:
+Error messages with actionable guidance.
+Highlight problematic nodes.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
