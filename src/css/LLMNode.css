@@ -1,0 +1,79 @@
+.llm-node {
+    font-family: Arial, sans-serif;
+    width: 325px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .llm-node-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .llm-node-header .circle {
+    width: 10px;
+    height: 10px;
+    background: #d9d9d9;
+    border-radius: 50%;
+  }
+  
+  .llm-node-description {
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    color: #666666;
+    margin-left: 15px;
+  }
+  
+  .llm-node-content {
+    padding: 15px;
+  }
+
+  .llm-node-content .input-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .llm-node-content label {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #444;
+  }
+  
+  .llm-node-content input,
+  .llm-node-content select {
+    padding: 5px;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .llm-node-content input[readonly] {
+    background: #f9f9f9;
+  }
+  
+  .llm-node-ports {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    margin-top: 10px;
+  }
+  
+  .llm-node-ports .port {
+    font-size: 12px;
+    color: #555;
+  }
+  
