@@ -7,18 +7,16 @@ if (process.env.NODE_ENV === 'development') {
   const originalConsoleError = console.error;
   console.error = (...args) => {
     if (/ResizeObserver loop completed with undelivered notifications/.test(args[0])) {
-      // Suppress this specific error message
       return;
     }
-    originalConsoleError(...args);  // Otherwise log the error
+    originalConsoleError(...args);  
   };
   window.addEventListener('resize', function () {
     if (resizeTimeout) {
       clearTimeout(resizeTimeout);
     }
     resizeTimeout = setTimeout(() => {
-      // Suppress the ResizeObserver error, and reset after resize
-    }, 200);  // Adjust the timeout value if needed
+    }, 200); 
   });
 }
 

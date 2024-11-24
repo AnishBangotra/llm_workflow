@@ -16,13 +16,12 @@ const InputNode = ({ data, hasError, success }) => {
         borderRadius: "12px",
         borderColor: hasError ? "1px solid #FF5353" : "1px solid #ddd",
         backgroundColor: "#fff",
-        width: "325px", // Set width
-        minHeight: "200px", // Set a height consistent with the design
-        boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)", // Add box shadow
+        width: "325px", 
+        minHeight: "200px", 
+        boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)", 
         fontFamily: "'Inter', sans-serif",
       }}
     >
-      {/* Top Section with the title and dot */}
       <div
         style={{
           display: "flex",
@@ -48,22 +47,20 @@ const InputNode = ({ data, hasError, success }) => {
               ? "#0FA958" 
               : "#888",   
             borderRadius: "50%",
-            position: "relative", // Enables positioning of the child icon
-            display: "flex", // Enables centering content
-            alignItems: "center", // Vertical centering
-            justifyContent: "center", // Horizontal centering
+            position: "relative", 
+            display: "flex", 
+            alignItems: "center", 
+            justifyContent: "center", 
           }}
         >
             { hasError ? 
             <ErrorPop style={{
                 position: 'absolute',
                 bottom: '14px'
-                // left: "100%",
             }} /> : null }
         </div>
       </div>
 
-      {/* Input description */}
       <div style={{
             height: '48.28px', 
             backgroundColor: '#EEF4FF', 
@@ -82,7 +79,6 @@ const InputNode = ({ data, hasError, success }) => {
         </p>
       </div>
 
-      {/* Input Field */}
       <div style={{padding: '18px'}}>
         <label
           htmlFor="input"

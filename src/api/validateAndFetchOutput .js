@@ -28,6 +28,8 @@ export const validateAndFetchOutput = async (inputData, llmConfig, setOutputData
     if (response.status === 200 && response.data.choices?.length > 0) {
       setOutputData(response.data.choices[0].text.trim());
       setSuccess(true);
+      setError(false)
+      setErrorMessage("");
     } else {
       setError(true);
       setErrorMessage("Invalid response from the LLM API.");

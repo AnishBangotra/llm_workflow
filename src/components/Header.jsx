@@ -22,12 +22,10 @@ const Header = ({ onRun }) => {
         borderBottom: "1px solid #eaeaea",
       }}
     >
-      {/* Logo Section */}
       <div style={{ display: "flex", alignItems: "center", gap: "10px", marginLeft: "10px" }}>
         <OpenAGI />
       </div>
 
-      {/* Buttons Section */}
       <div style={{ display: "flex", alignItems: "center", gap: "10px", marginRight: "90px" }}>
         <button
           onClick={() => alert('Deploying functionality is not finished yet...')}

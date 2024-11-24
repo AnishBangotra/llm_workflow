@@ -61,7 +61,6 @@ function App() {
       (edge) => edge.source === "llmNode" && edge.target === "outputNode"
     );
   
-    // If the edges are not connected in the correct order, show an error
     if (edges.length === 2) {
       setSuccess(false);
       setInputData("");;
@@ -69,7 +68,6 @@ function App() {
       
       let newErrors = { ...nodeErrors };
 
-      // Validate Input Node Data
       if (!inputData.trim()) {
         newErrors = { ...newErrors, first: "Input is missing input key" };
         setError(true);
@@ -80,7 +78,6 @@ function App() {
         delete newErrors.first;
       }
 
-      // Validate LLM Node Configuration
       if (!llmConfig.apiKey || !llmConfig.maxTokens || !llmConfig.baseUrl) {
         newErrors = { ...newErrors, llm: "LLM Engine is incomplete." };
         setError(true);
@@ -96,7 +93,6 @@ function App() {
       setErrorMessage("");
 
       validateAndFetchOutput(inputData, llmConfig, setOutputData, setError, setErrorMessage, setSuccess);
-      console.log('OUTPUTTTTTTTTTTTTTTTTTTTTTTT',outputData);
     } else {
       if (!inputToLLM || !llmToOutput) {
         setError(true);
@@ -113,8 +109,8 @@ function App() {
         <div style={{ display: 'flex', height: "calc(100% - 50px)", marginTop: "50px" }}>
         <div
             style={{
-              width: "280px", // Fixed width for the sidebar
-              height: "100%", // Full height
+              width: "280px",
+              height: "100%", 
               left: "25px",
               top: "60px",
               position: "absolute",

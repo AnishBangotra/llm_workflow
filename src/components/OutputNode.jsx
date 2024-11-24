@@ -16,13 +16,12 @@ const OutputNode = ({ data, outputData, success }) => {
           style={{
             borderRadius: "12px",
             backgroundColor: "#fff",
-            width: "325px", // Set width
-            minHeight: "200px", // Set a height consistent with the design
-            boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)", // Add box shadow
+            width: "325px", 
+            minHeight: "200px", 
+            boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
             fontFamily: "'Inter', sans-serif",
           }}
         >
-          {/* Top Section with the title and dot */}
           <div
             style={{
               display: "flex",
@@ -48,7 +47,6 @@ const OutputNode = ({ data, outputData, success }) => {
             ></div>
           </div>
     
-          {/* Input description */}
           <div style={{
                 height: '48.28px', 
                 backgroundColor: '#EEF4FF', 
@@ -67,7 +65,6 @@ const OutputNode = ({ data, outputData, success }) => {
             </p>
           </div>
     
-          {/* Input Field */}
           <div style={{padding: '18px'}}>
             <label
               htmlFor="input"
@@ -91,11 +88,11 @@ const OutputNode = ({ data, outputData, success }) => {
                     border: "1px solid #ddd",
                     borderRadius: "4px",
                     fontSize: "14px",
-                    resize: "none", // Disable resizing by the user
-                    overflow: "hidden", // Hide any unintended overflow
-                    whiteSpace: "pre-wrap", // Ensure text wraps to the next line
+                    resize: "none", 
+                    overflow: "hidden", 
+                    whiteSpace: "pre-wrap", 
                 }}
-                rows={outputData ? Math.ceil(outputData.length / 50) : 1} // Dynamically calculate rows
+                rows={outputData ? Math.ceil(outputData.length / 50) : 1}
                 />
           </div>
           <div style={{
@@ -103,8 +100,6 @@ const OutputNode = ({ data, outputData, success }) => {
             alignItems: 'center',
             padding: "20px",
             marginRight: "20px",
-            // marginLeft: "55%", 
-            // marginTop: "10px"
         }}>
             <Handle
                 type="target"

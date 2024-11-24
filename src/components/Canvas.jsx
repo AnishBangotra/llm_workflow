@@ -17,14 +17,13 @@ const useResizeObserver = () => {
     const observer = new ResizeObserver(() => {
       if (resizeTimeout) clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(() => {
-        // Handle resize logic here
       }, 200);
     });
 
-    observer.observe(document.body);  // You can replace document.body with a specific element to observe
+    observer.observe(document.body);  
 
     return () => {
-      observer.disconnect();  // Clean up observer on unmount
+      observer.disconnect(); 
     };
   }, []);
 };
@@ -93,7 +92,7 @@ const Canvas = ({
   );
 
   const edgeTypes = useMemo(() => ({
-    default: StraightEdge,  // Define the custom edge component here
+    default: StraightEdge,  
   }), []);
 
   return (
